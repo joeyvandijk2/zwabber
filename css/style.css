@@ -1,0 +1,29 @@
+.topbalk
+{
+	background-color: red;
+	height: 110px;
+}
+
+#container
+{
+	background-color: blue;
+	height: 650px;
+}
+
+.logo
+{
+	background-color: green;
+	height: 110px;
+}
+
+.menu
+{
+	background-color: purple;
+	height: 110px;
+}
+
+.inlog
+{
+	background-color: green;
+	height: 110px;
+}
