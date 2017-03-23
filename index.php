@@ -1,4 +1,18 @@
 <?php
+include_once("classes/table.php");
+include_once("classes/database.php");
+$classtable = new table();
+if(empty($_GET["table"])){$_GET["table"] = "bedrijf";}
+if($_GET["table"] == "bedrijf"){
+    $table = $classtable->bedrijfen();
+}
+if($_GET["table"] == "kamer"){
+    $table = $classtable->kamers();
+}
+if($_GET["table"] == "object"){
+    $table = $classtable->objecten();
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -58,7 +72,7 @@
 	</div>
 
 	<div class="content container">
-		
+		<?php echo  $table; ?>
 	</div>
 	<div id="footer"></div>
 </body>

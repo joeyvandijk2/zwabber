@@ -1,6 +1,6 @@
 <?php
 class db{
-    private $conn;
+    public $conn;
     public function __construct(){
         $servername = "localhost";
         $username = "root";
@@ -15,15 +15,10 @@ class db{
     }
 
     public function select($tabel){
-        $sql = "SELECT * FROM ".$tabel ;
-        $result = $this->conn->query($sql);
+        $sql = "SELECT * FROM ".$tabel;
 
-        if ($result->num_rows > 0) {
-           return $result;
-        }
-        else{
-            return "niets gevonden";
-        }
+
+        return $sql;
     }
 
     public function update($tabel, $set, $where)

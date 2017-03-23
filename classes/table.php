@@ -3,12 +3,13 @@ class table
 {
     private $table;
     private $db;
-    private function __construct()
+    public function __construct()
     {
         $this->db = new db();
     }
     public function bedrijfen()
     {
+        $result = $this->db->conn->query($this->db->select("bedrijf"));
         $this->table = "<table>";
         $this->table .= "<tr>";
         $this->table .= "<td> Bedrijf ID</td>";
@@ -17,7 +18,7 @@ class table
         $this->table .= "<td> Bedrijf Telefoon</td>";
         $this->table .= "<td> Opties</td>";
         $this->table .= "</tr>";
-        while($bedrijf = $this->db->select()->fetch_assoc()) {
+        while($bedrijf = $result->fetch_assoc()) {
              $this->table .= "<tr>";
              $this->table .= "<td>".$bedrijf["bedrijfId"]."</td>";
              $this->table .= "<td>".$bedrijf["bedrijfNaam"]."</td>";
@@ -31,6 +32,7 @@ class table
     }
     public function kamers()
     {
+        $result = $this->db->conn->query($this->db->select("kamer"));
         $this->table = "<table>";
         $this->table .= "<tr>";
         $this->table .= "<td> Kamer ID</td>";
@@ -40,7 +42,7 @@ class table
         $this->table .= "<td> Prioriteit</td>";
         $this->table .= "<td> Opties</td>";
         $this->table .= "</tr>";
-        while($bedrijf = $this->db->select()->fetch_assoc()) {
+        while($bedrijf = $result->fetch_assoc()) {
             $this->table .= "<tr>";
             $this->table .= "<td>".$bedrijf["kamerId"]."</td>";
             $this->table .= "<td>".$bedrijf["kamerNaam"]."</td>";
@@ -54,6 +56,7 @@ class table
     }
     public function objecten()
     {
+        $result = $this->db->conn->query($this->db->select("object"));
         $this->table = "<table>";
         $this->table .= "<tr>";
         $this->table .= "<td> Object ID</td>";
@@ -62,7 +65,7 @@ class table
         $this->table .= "<td> Aantal Objecten</td>";
         $this->table .= "<td> Opties</td>";
         $this->table .= "</tr>";
-        while($bedrijf = $this->db->select()->fetch_assoc()) {
+        while($bedrijf = $result->fetch_assoc()) {
             $this->table .= "<tr>";
             $this->table .= "<td>".$bedrijf["objectId"]."</td>";
             $this->table .= "<td>".$bedrijf["objectNaam"]."</td>";
