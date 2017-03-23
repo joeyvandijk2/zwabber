@@ -21,9 +21,9 @@
 
 	<div class="container-fluid topbalk">
 		<div class="col-xs-2 col-md-2 logo">
-            logo
+            <img src="images/logo.jpg">
         </div>
-		<div class="col-xs-8 col-md-8 menu">
+		<div class="col-xs-6 col-md-6 menu">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
@@ -40,12 +40,24 @@
                 </ul>
             </div>
         </div>
-		<div class="col-xs-2 col-md-2 inlog">
-            inlog
+		<div class="col-xs-4 col-md-4 inlog">
+            <form>
+
+                <input type="email" class="form-control inloginput" id="exampleInputEmail1" placeholder="Username">
+
+                <input type="submit" class="btn btn-default logbtn" value="log in">
+
+                <input type="password" class="form-control inloginput" id="exampleInputPassword1" placeholder="Password">
+
+                <input type="submit" class="btn btn-default logbtn" value="register">
+
+
+
+            </form>
         </div>
 	</div>
 
-	<div class="container" id="container">
+	<div class="content container">
 		
 	</div>
 	<div id="footer"></div>

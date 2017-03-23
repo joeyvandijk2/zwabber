@@ -3,12 +3,14 @@
 	background-color: red;
 	height: 110px;
 	text-align: center;
+	position: static;
 }
 
-#container
+.content
 {
 	background-color: blue;
 	height: 650px;
+	vertical-align: middle;
 }
 
 .logo
@@ -31,5 +33,30 @@
 
 ul> li> a
 {
+	padding-top: 20%;
+	color: black;
+	font-size: 150%;
 	height: 110px;
+	display:block;
+}
+
+img
+{
+	width: 100%;
+	height: 100%;
+}
+
+.inloginput
+{
+	width: 300px !important;
+	margin-top: 10px;
+	float: left;
+	margin-right: 5px;
+
+}
+.logbtn
+{
+	margin-top: 10px;
+	width: 100px !important;
+	float: left;
 }
