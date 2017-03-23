@@ -2,6 +2,7 @@
 {
 	background-color: red;
 	height: 110px;
+	text-align: center;
 }
 
 #container
@@ -18,12 +19,17 @@
 
 .menu
 {
-	background-color: purple;
+	background-color: white;
 	height: 110px;
 }
 
 .inlog
 {
 	background-color: green;
+	height: 110px;
+}
+
+ul> li> a
+{
 	height: 110px;
 }

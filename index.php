@@ -1,4 +1,5 @@
-<php></php>
+<?php
+?>
 
 <!DOCTYPE html>
 <html>
@@ -17,12 +18,33 @@
 
 </head>
 <body>
+
 	<div class="container-fluid topbalk">
-		<div class="col-xs-2 col-md-2 logo">logo</div>
-		<div class="col-xs-8 col-md-8 menu">menu balk</div>
-		<div class="col-xs-2 col-md-2 inlog">inlog</div>
+		<div class="col-xs-2 col-md-2 logo">
+            logo
+        </div>
+		<div class="col-xs-8 col-md-8 menu">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </div>
+        </div>
+		<div class="col-xs-2 col-md-2 inlog">
+            inlog
+        </div>
 	</div>
-	
+
 	<div class="container" id="container">
 		
 	</div>
