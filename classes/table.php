@@ -10,7 +10,7 @@ class table
     public function bedrijfen()
     {
         $result = $this->db->conn->query($this->db->select("bedrijf"));
-        $this->table = "<table>";
+        $this->table = "<table class='table table-striped table-condeced'>";
         $this->table .= "<tr>";
         $this->table .= "<td> Bedrijf ID</td>";
         $this->table .= "<td> Bedrijf Naam</td>";
@@ -33,7 +33,7 @@ class table
     public function kamers()
     {
         $result = $this->db->conn->query($this->db->select("kamer"));
-        $this->table = "<table>";
+        $this->table = "<table class='table table-striped table-condeced'>";
         $this->table .= "<tr>";
         $this->table .= "<td> Kamer ID</td>";
         $this->table .= "<td> Kamer Naam</td>";
@@ -42,6 +42,7 @@ class table
         $this->table .= "<td> Prioriteit</td>";
         $this->table .= "<td> Opties</td>";
         $this->table .= "</tr>";
+        
         while($bedrijf = $result->fetch_assoc()) {
             $this->table .= "<tr>";
             $this->table .= "<td>".$bedrijf["kamerId"]."</td>";
@@ -57,7 +58,7 @@ class table
     public function objecten()
     {
         $result = $this->db->conn->query($this->db->select("object"));
-        $this->table = "<table>";
+        $this->table = "<table class='table table-striped table-condeced'>";
         $this->table .= "<tr>";
         $this->table .= "<td> Object ID</td>";
         $this->table .= "<td> Object Naam</td>";

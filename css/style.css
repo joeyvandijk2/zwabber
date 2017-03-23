@@ -1,6 +1,11 @@
+body
+{
+	background-color: black !important;
+}
+
 .topbalk
 {
-	background-color: red;
+	background-color: white;
 	height: 110px;
 	text-align: center;
 	position: static;
@@ -8,15 +13,15 @@
 
 .content
 {
-	background-color: blue;
 	height: 650px;
 	vertical-align: middle;
+	background-color: white;
 }
 
 .logo
 {
-	background-color: green;
 	height: 110px;
+	background-color: white;
 }
 
 .menu
@@ -27,7 +32,6 @@
 
 .inlog
 {
-	background-color: green;
 	height: 110px;
 }
 
