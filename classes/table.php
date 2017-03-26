@@ -42,7 +42,7 @@ class table
         $this->table .= "<td> Prioriteit</td>";
         $this->table .= "<td> Opties</td>";
         $this->table .= "</tr>";
-        
+
         while($bedrijf = $result->fetch_assoc()) {
             $this->table .= "<tr>";
             $this->table .= "<td>".$bedrijf["kamerId"]."</td>";
