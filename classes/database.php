@@ -14,8 +14,8 @@ class db{
         }
     }
 
-    public function select($tabel){
-        $sql = "SELECT * FROM ".$tabel;
+    public function select($tabel , $where=""){
+        $sql = "SELECT * FROM ".$tabel. " " . $where;
 
 
         return $sql;
