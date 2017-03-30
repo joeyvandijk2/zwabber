@@ -22,10 +22,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="table.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3944511">
+            <state vertical-scroll-proportion="-18.961538">
               <caret line="68" column="32" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
               <folding>
                 <marker date="1490873437167" expanded="true" signature="1034:1388" placeholder="..." />
@@ -44,7 +44,7 @@
       <file leaf-file-name="database.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.4615386">
+            <state vertical-scroll-proportion="-8.346154">
               <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
                 <marker date="1490784472235" expanded="true" signature="461:475" placeholder="SELECT * FRO..." />
@@ -59,18 +59,28 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.153846">
-              <caret line="14" column="92" selection-start-line="14" selection-start-column="92" selection-end-line="14" selection-end-column="92" />
+            <state vertical-scroll-proportion="-14.384615">
+              <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modals.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="modals.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/modals.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.461538">
-              <caret line="119" column="14" selection-start-line="119" selection-start-column="14" selection-end-line="119" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.7382389">
+              <caret line="132" column="74" selection-start-line="132" selection-start-column="74" selection-end-line="132" selection-end-column="74" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Delete.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hulp/Delete.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.8461537">
+              <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -88,6 +98,7 @@
         <option value="$PROJECT_DIR$/classes/database.php" />
         <option value="$PROJECT_DIR$/classes/table.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/hulp/Delete.php" />
         <option value="$PROJECT_DIR$/classes/modals.php" />
       </list>
     </option>
@@ -147,6 +158,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="zwabber" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zwabber" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zwabber" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hulp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -491,25 +516,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/modals.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.461538">
-          <caret line="119" column="14" selection-start-line="119" selection-start-column="14" selection-end-line="119" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846">
-          <caret line="14" column="92" selection-start-line="14" selection-start-column="92" selection-end-line="14" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.4615386">
+        <state vertical-scroll-proportion="-8.346154">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <marker date="1490784472235" expanded="true" signature="461:475" placeholder="SELECT * FRO..." />
@@ -522,7 +531,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3944511">
+        <state vertical-scroll-proportion="-18.961538">
           <caret line="68" column="32" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
           <folding>
             <marker date="1490873437167" expanded="true" signature="1034:1388" placeholder="..." />
@@ -534,6 +543,30 @@
             <marker date="1490873437167" expanded="true" signature="3703:4017" placeholder="..." />
             <marker date="1490873437167" expanded="true" signature="3703:4398" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.384615">
+          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hulp/Delete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8461537">
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/modals.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7382389">
+          <caret line="132" column="74" selection-start-line="132" selection-start-column="74" selection-end-line="132" selection-end-column="74" />
+          <folding />
         </state>
       </provider>
     </entry>

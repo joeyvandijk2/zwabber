@@ -38,11 +38,11 @@ if($_GET["table"] == "bedrijf"){
         <h4 class="modal-title" id="myModalLabel">Modal title</h4>
           </div>
           <div class="modal-body">
-            dlete >?'.$row["bedrijfId"].'
+            Weet je zeker dat je het bedrijf '.$row["bedrijfNaam"].' wilt verwijderen?
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <a class="btn btn-primary" href="hulp/Delete.php?delete=bedrijf&id='.$row["bedrijfId"].'">Jazeker</a>
           </div>
         </div>
       </div>
@@ -87,7 +87,7 @@ if($_GET["table"] == "kamer") {
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <a class="btn btn-primary" href="hulp/Delete.php?delete=kamer&id='.$row["kamerId"].'">Jazeker</a>
           </div>
         </div>
       </div>
@@ -130,7 +130,7 @@ if($_GET["table"] == "object") {
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <a class="btn btn-primary" href="hulp/Delete.php?delete=object&id='.$row["bedrijfId"].'">Jazeker</a>
           </div>
         </div>
       </div>
