@@ -33,6 +33,7 @@ body
 .inlog
 {
 	height: 110px;
+	padding-top: 20%;
 }
 
 ul> li> a
@@ -63,4 +64,13 @@ img
 	margin-top: 10px;
 	width: 100px !important;
 	float: left;
+}
+.todo
+{
+	margin-top: 12px;
+}
+.lol
+{
+	width: 200px !important;
+	float: right !important;
 }
