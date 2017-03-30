@@ -24,7 +24,8 @@ class table
              $this->table .= "<td>".$bedrijf["bedrijfNaam"]."</td>";
              $this->table .= "<td>".$bedrijf["bedrijfPlaats"]."</td>";
              $this->table .= "<td>".$bedrijf["bedrijfTelefoon"]."</td>";
-             $this->table .= "<td><a href='?table=kamer&bedrijfid=".$bedrijf["bedrijfId"]."'><span class='glyphicon glyphicon-arrow-right'></span> </a> </td>";
+             $this->table .= "<td><a href='?table=kamer&bedrijfid=".$bedrijf["bedrijfId"]."'><span class='glyphicon glyphicon-arrow-right'></span> </a><a><span class='glyphicon glyphicon-cog' data-toggle='modal' data-target='.upd".$bedrijf["bedrijfId"]."'></span></a><a><span class='glyphicon glyphicon-trash' data-toggle='modal' data-target='.del".$bedrijf["bedrijfId"]."'></span></a>";
+             $this->table .=  "</td>";
              $this->table .= "</tr>";
         }
         $this->table .= "</table>";
@@ -48,7 +49,8 @@ class table
             $this->table .= "<td>".$bedrijf["kamerNaam"]."</td>";
             $this->table .= "<td>".$bedrijf["kamerminpunten"]."</td>";
             $this->table .= "<td>".$bedrijf["kamerPrioriteit"]."</td>";
-            $this->table .= "<td><a href='?table=bedrijf'><span class='glyphicon glyphicon-arrow-left'></span> </a><a href='?table=object&bedrijfid=".$bedrijf["bedrijfId"]."&kamerid=".$bedrijf["kamerId"]."'><span class='glyphicon glyphicon-arrow-right'></span> </a></td>";
+            $this->table .= "<td><a href='?table=bedrijf'><span class='glyphicon glyphicon-arrow-left'></span> </a><a href='?table=object&bedrijfid=".$bedrijf["bedrijfId"]."&kamerid=".$bedrijf["kamerId"]."'><span class='glyphicon glyphicon-arrow-right'></span> </a>";
+            $this->table .= "<a><span class='glyphicon glyphicon-cog' data-toggle='modal' data-target='.upd".$bedrijf["kamerId"]."'></span></a><a><span class='glyphicon glyphicon-trash' data-toggle='modal' data-target='.del".$bedrijf["kamerId"]."'></span></a></td>";
             $this->table .= "</tr>";
         }
         $this->table .= "</table>";
@@ -71,7 +73,9 @@ class table
             $this->table .= "<td>".$bedrijf["objectNaam"]."</td>";
             $this->table .= "<td>".$bedrijf["objectPunten"]."</td>";
             $this->table .= "<td>".$bedrijf["objectAantal"]."</td>";
-            $this->table .= "<td><a href='?table=bedrijf'><span class='glyphicon glyphicon-arrow-left'></span> </a></td>";
+            $this->table .= "<td><a href='?table=bedrijf'><span class='glyphicon glyphicon-arrow-left'></span> </a>";
+            $this->table .= "<a><span class='glyphicon glyphicon-cog' data-toggle='modal' data-target='.upd".$bedrijf["objectId"]."'></span></a><a><span class='glyphicon glyphicon-trash' data-toggle='modal' data-target='.del".$bedrijf["objectId"]."'></span></a></td>";
+
             $this->table .= "</tr>";
         }
         $this->table .= "</table>";
