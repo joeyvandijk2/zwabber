@@ -24,7 +24,6 @@ class db{
     public function update($tabel, $set, $where)
     {
         $sql = "UPDATE " . $tabel . " SET " . $set . " WHERE " . $where;
-
         if ($this->conn->query($sql) === TRUE) {
             return "updated";
         } else {
