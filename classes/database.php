@@ -42,7 +42,6 @@ class db{
     }
     public function create($tabel, $rijen, $values){
         $sql = "INSERT INTO ".$tabel." (".$rijen.") VALUES (".$values.")";
-
         if ($this->conn->query($sql) === TRUE) {
             return "created";
         }

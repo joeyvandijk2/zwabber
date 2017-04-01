@@ -5,6 +5,42 @@ if(empty($_GET["table"])){$_GET["table"] = "bedrijf";}
 if($_GET["table"] == "bedrijf"){
     $table = $classtable->bedrijfen();
     $bedrijven = $db->conn->query($db->select("bedrijf"));
+    echo '
+    <div class="modal fade bs-example-modal-sm createbedrijf" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Bedrijf aanmaken</h4>
+          </div>
+          <form method="get" action="hulp/Create.php">
+          <div class="modal-body">
+
+            <table>
+                <tr>
+                    <td>Bedrijfs Naam:</td>
+                    <td><input type="text" name="bedrijfnaam"></td>
+                </tr>
+                <tr>
+                    <td>Bedrijfs Plaats:</td>
+                    <td><input type="text" name="bedrijfplaats"></td>
+                <tr>
+                <tr>
+                    <td>Bedrijfs Telefoon:</td>
+                    <td><input type="text" name="bedrijftelefoon"></td>
+                <tr>
+             </table>
+            <input type="text" class="invisible" name="create" value="bedrijf">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save changes</button>
+          </div>
+           </form>
+        </div>
+      </div>
+    </div>';
     while($row = $bedrijven->fetch_assoc())
     {
         echo '
@@ -12,7 +48,7 @@ if($_GET["table"] == "bedrijf"){
 
 
     <div class="modal fade bs-example-modal-sm upd'.$row["bedrijfId"].'" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-      <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-dialog modal-md" role="document">
         <div class="modal-content">
           <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -49,8 +85,8 @@ if($_GET["table"] == "bedrijf"){
     </div>';
 
         echo '
-    <div class="modal fade bs-example-modal-sm del'.$row["bedrijfId"].'" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-      <div class="modal-dialog modal-sm" role="document">
+    <div class="modal fade bs-example-modal-sm del'.$row["bedrijfId"].'" tabindex="-1" role="dialog" aria-labelledby="mymdallModalLabel">
+      <div class="modal-dialog modal-md" role="document">
         <div class="modal-content">
           <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -72,11 +108,52 @@ if($_GET["table"] == "bedrijf"){
 if($_GET["table"] == "kamer") {
     $table = $classtable->kamers();
     $kamers = $db->conn->query($db->select("kamer"));
+    echo '
+    <div class="modal fade bs-example-modal-sm createkamer" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Kamer aanmaken</h4>
+          </div>
+          <form method="get" action="hulp/Create.php">
+          <div class="modal-body">
+
+            <table>
+                <tr>
+                    <td>Kamer Naam:</td>
+                    <td><input type="text" name="kamernaam"></td>
+                </tr>
+                <tr>
+                    <td>Kamer minimum Punten:</td>
+                    <td><input type="text" name="kamerminpunten"></td>
+                <tr>
+                <tr>
+                    <td>Kamer prioriteit:</td>
+                    <td><input type="text" name="kamerprioriteit"></td>
+                <tr>
+                <tr>
+                    <td>Werknemer id:</td>
+                    <td><input type="text" name="werknemerid"></td>
+                <tr>
+             </table>
+            <input type="text" class="invisible" name="create" value="kamer">
+            <input type="text" class="invisible" name="bedrijfid" value="'.$_GET['bedrijfid'].'">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save changes</button>
+          </div>
+           </form>
+        </div>
+      </div>
+    </div>';
     while ($row = $kamers->fetch_assoc()) {
         echo '
 
     <div class="modal fade bs-example-modal-sm upd' . $row["kamerId"] . '" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-      <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-dialog modal-md" role="document">
         <div class="modal-content">
           <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -114,14 +191,14 @@ if($_GET["table"] == "kamer") {
 
         echo '
     <div class="modal fade bs-example-modal-sm del' . $row["kamerId"] . '" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-      <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-dialog modal-md" role="document">
         <div class="modal-content">
           <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="myModalLabel">Kamer verwijderen</h4>
           </div>
           <div class="modal-body">
-            dlete >?' . $row["kamerId"] . '
+             Weet je zeker dat je het bedrijf '.$row["kamerNaam"].' wilt verwijderen?
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -135,10 +212,47 @@ if($_GET["table"] == "kamer") {
 if($_GET["table"] == "object") {
     $table = $classtable->objecten();
     $object = $db->conn->query($db->select("object"));
+    echo '
+    <div class="modal fade bs-example-modal-sm createobject" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Object aanmaken</h4>
+          </div>
+          <form method="get" action="hulp/Create.php">
+          <div class="modal-body">
+
+            <table>
+                <tr>
+                    <td>Object Naam:</td>
+                    <td><input type="text" name="objectnaam"></td>
+                </tr>
+                <tr>
+                    <td>Object Punten:</td>
+                    <td><input type="text" name="objectpunten"></td>
+                <tr>
+                <tr>
+                    <td>Object aantal:</td>
+                    <td><input type="text" name="objectaantal"></td>
+                <tr>
+             </table>
+            <input type="text" class="invisible" name="create" value="object">
+            <input type="text" class="invisible" name="kamerid" value="'.$_GET["kamerid"].'">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save changes</button>
+          </div>
+           </form>
+        </div>
+      </div>
+    </div>';
     while ($row = $object->fetch_assoc()) {
         echo '
     <div class="modal fade bs-example-modal-sm upd' . $row["objectId"] . '" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-      <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-dialog modal-md" role="document">
         <div class="modal-content">
           <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -176,14 +290,14 @@ if($_GET["table"] == "object") {
 
         echo '
     <div class="modal fade bs-example-modal-sm del' . $row["objectId"] . '" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-      <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-dialog modal-md" role="document">
         <div class="modal-content">
           <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="myModalLabel">Object verwijderen</h4>
           </div>
           <div class="modal-body">
-            dlete >?' . $row["objectId"] . '
+             Weet je zeker dat je het bedrijf '.$row["objectNaam"].' wilt verwijderen?
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
