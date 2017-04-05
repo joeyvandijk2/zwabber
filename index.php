@@ -33,7 +33,7 @@ if($_GET["table"] == "object")$create = "<a><span class='glyphicon glyphicon-plu
 
 	<div class="container-fluid topbalk">
 		<div class="col-xs-2 col-md-2 logo">
-            <img src="images/logo.jpg">
+            <img src="images/logo5.gif">
         </div>
 		<div class="col-xs-6 col-md-6 menu">
             <div class="navbar-header">

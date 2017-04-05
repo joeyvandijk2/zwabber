@@ -28,7 +28,7 @@ include_once("classes/database.php");
 
 <div class="container-fluid topbalk">
     <div class="col-xs-2 col-md-2 logo">
-        <img src="images/logo.jpg">
+        <img src="images/logo5.gif">
     </div>
     <div class="col-xs-6 col-md-6 menu">
         <div class="navbar-header">
@@ -48,7 +48,7 @@ include_once("classes/database.php");
         </div>
     </div>
     <div class="col-xs-4 col-md-4 inlog">
-        <button type="button" class="btn btn-default lol">log out</button>
+        <button type="button" class="btn btn-default logout">log out</button>
     </div>
 </div>
 
