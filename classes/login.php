@@ -8,9 +8,10 @@ if(isset($_POST['login'])){
     $result = $db->conn->query($db->select("werknemer"));
     while($acc = $result->fetch_assoc()) {
         if($_POST['username'] == $acc["werknemerGebruikersnaam"] and $_POST['password'] == $acc["werknemerWachtwoord"]){
-            if($acc == 1){
+            if($acc["Rechten"] == 1){
                 $_SESSION["rechten"] = 1;
             }
+            $_SESSION["id"] = $acc["werknemerId"];
             $_SESSION["log"] = 1;
         }
     }

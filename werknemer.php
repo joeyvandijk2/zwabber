@@ -2,9 +2,8 @@
 session_start();
 include_once("classes/table.php");
 include_once("classes/database.php");
-
+include_once("classes/login.php");
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,13 +46,13 @@ include_once("classes/database.php");
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Link</a></li>
+                <li class="active"><a href="index.php">Overzicht<span class="sr-only">(current)</span></a></li>
+                <li><a href="werknemer.php">Werknemer</a></li>
             </ul>
         </div>
     </div>
     <div class="col-xs-4 col-md-4 inlog">
-        <button type="button" class="btn btn-default logout">log out</button>
+       <?= $login;?>
     </div>
 </div>
 
