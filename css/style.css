@@ -17,7 +17,6 @@ body
 
 .content
 {
-	height: 650px;
 	vertical-align: middle;
 	background-color: white;
 }
@@ -71,6 +70,7 @@ ul> li> a
 }
 .todo
 {
+	margin-bottom: 50px !important;
 	margin-top: 12px;
 }
 .logout
