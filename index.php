@@ -54,17 +54,9 @@ if($_GET["table"] == "object")$create = "<a><span class='glyphicon glyphicon-plu
         </div>
 		<div class="col-xs-4 col-md-4 inlog">
             <form>
-
                 <input type="email" class="form-control inloginput" id="exampleInputEmail1" placeholder="Username">
-
-                <input type="submit" class="btn btn-default logbtn" value="log in">
-
                 <input type="password" class="form-control inloginput" id="exampleInputPassword1" placeholder="Password">
-
-                <input type="submit" class="btn btn-default logbtn" value="register">
-
-
-
+                <input type="submit" class="btn btn-default logbtn" value="log in">
             </form>
         </div>
 	</div>
