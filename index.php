@@ -3,6 +3,7 @@ session_start();
 include_once("classes/table.php");
 include_once("classes/database.php");
 include_once("classes/modals.php");
+include_once("classes/login.php");
 $create= "";
 if($_GET["table"] == "bedrijf")$create = "<a><span class='glyphicon glyphicon-plus' data-toggle='modal' data-target='.createbedrijf'></span></a>";
 if($_GET["table"] == "kamer")$create = "<a><span class='glyphicon glyphicon-plus' data-toggle='modal' data-target='.createkamer'></span></a>";
@@ -53,11 +54,7 @@ if($_GET["table"] == "object")$create = "<a><span class='glyphicon glyphicon-plu
             </div>
         </div>
 		<div class="col-xs-4 col-md-4 inlog">
-            <form>
-                <input type="email" class="form-control inloginput" id="exampleInputEmail1" placeholder="Username">
-                <input type="password" class="form-control inloginput" id="exampleInputPassword1" placeholder="Password">
-                <input type="submit" class="btn btn-default logbtn" value="log in">
-            </form>
+            <?= $login; ?>
         </div>
 	</div>
 

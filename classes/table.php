@@ -9,6 +9,7 @@ class table
     }
     public function bedrijfen()
     {
+
         $result = $this->db->conn->query($this->db->select("bedrijf"));
         $this->table = "<table class='table table-striped table-condeced'>";
         $this->table .= "<tr>";
