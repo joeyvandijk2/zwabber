@@ -11,6 +11,7 @@ class table
     {
 
         $result = $this->db->conn->query($this->db->select("bedrijf"));
+        $werknemers = $this->db->conn->query($this->db->select("werknemer"));
         $this->table = "<table class='table table-striped table-condeced'>";
         $this->table .= "<tr>";
         $this->table .= "<td> Bedrijf ID</td>";
@@ -25,7 +26,14 @@ class table
              $this->table .= "<td>".$bedrijf["bedrijfNaam"]."</td>";
              $this->table .= "<td>".$bedrijf["bedrijfPlaats"]."</td>";
              $this->table .= "<td>".$bedrijf["bedrijfTelefoon"]."</td>";
-             $this->table .= "<td><a href='?table=kamer&bedrijfid=".$bedrijf["bedrijfId"]."'><span class='glyphicon glyphicon-arrow-right'></span> </a><a><span class='glyphicon glyphicon-cog' data-toggle='modal' data-target='.upd".$bedrijf["bedrijfId"]."'></span></a><a><span class='glyphicon glyphicon-trash' data-toggle='modal' data-target='.del".$bedrijf["bedrijfId"]."'></span></a>";
+             $this->table .= "<td><a href='?table=kamer&bedrijfid=" . $bedrijf["bedrijfId"] . "'><span class='glyphicon glyphicon-arrow-right'></span> </a>";
+            while($werknemer = $werknemers->fetch_assoc()) {
+                if($_SESSION["wid"] == $werknemer["werknemerId"]){
+                    if ($_SESSION["recht"] == 1) {
+                        $this->table .= "<a><span class='glyphicon glyphicon-cog' data-toggle='modal' data-target='.upd" . $bedrijf["bedrijfId"] . "'></span></a><a><span class='glyphicon glyphicon-trash' data-toggle='modal' data-target='.del" . $bedrijf["bedrijfId"] . "'></span></a>";
+                    }
+                }
+            }
              $this->table .=  "</td>";
              $this->table .= "</tr>";
         }

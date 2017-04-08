@@ -20,7 +20,9 @@ body
 	vertical-align: middle;
 	background-color: white;
 }
-
+.glyphicon-plus{
+	margin-bottom: 15px;
+}
 .logo
 {
 	height: 110px;

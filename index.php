@@ -1,9 +1,10 @@
 <?php
 session_start();
-include_once("classes/table.php");
 include_once("classes/database.php");
-include_once("classes/modals.php");
 include_once("classes/login.php");
+include_once("classes/table.php");
+include_once("classes/modals.php");
+
 $create= "";
 if($_GET["table"] == "bedrijf")$create = "<a><span class='glyphicon glyphicon-plus' data-toggle='modal' data-target='.createbedrijf'></span></a>";
 if($_GET["table"] == "kamer")$create = "<a><span class='glyphicon glyphicon-plus' data-toggle='modal' data-target='.createkamer'></span></a>";
