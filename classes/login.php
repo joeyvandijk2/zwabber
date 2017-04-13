@@ -26,6 +26,7 @@ if(isset($_POST['login'])){
 
 if(empty($_SESSION["log"])){ $_SESSION["log"] = 0;}
 if(empty($_SESSION["recht"])){ $_SESSION["recht"] = 0;}
+if(empty($_SESSION["wid"])){ $_SESSION["wid"] = 0;}
 if($_SESSION["log"] == 0){
     $login = ' <form method="post">
                     <input type="text" class="form-control inloginput" name="username" placeholder="Username">
