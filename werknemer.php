@@ -3,9 +3,11 @@ session_start();
 include_once("classes/table.php");
 include_once("classes/database.php");
 include_once("classes/login.php");
+include_once("hulp/werknemerinfo.php");
 $db = new db();
 $result = $db->conn->query($db->select("werkdagen", "WHERE werknemerId=" . $_SESSION["wid"]));
-
+$werkinfo = new werknemerinfo();
+$werkin = $werkinfo->werkinfo();
 ?>
 <!DOCTYPE html>
 <html>
@@ -61,33 +63,8 @@ $result = $db->conn->query($db->select("werkdagen", "WHERE werknemerId=" . $_SES
     </div>
 </div>
 <div class="content container">
-    <table class="table table-condensed">
-        <h2> Werknemer info </h2>
-        <tr class="active">
-            <th>voornaam:</th>
-            <td>Hans</td>
-        </tr>
-        <tr class="active">
-            <th>achternaam:</th>
-            <td>Timmerman</td>
-        </tr>
-        <tr class="active">
-            <th>telefoon nummer:</th>
-            <td>0610955356</td>
-        </tr>
-        <tr class="active">
-            <th>email:</th>
-            <td>Hans@gmail.com:</td>
-        </tr>
-        <tr class="active">
-            <th>woonplaats:</th>
-            <td>Arnem, Hogeweg, 13 POHT34</td>
-        </tr>
-        <tr class="active">
-            <th>geslacht:</th>
-            <td>man</td>
-        </tr>
-    </table>
+
+    <?= $werkin; ?>
     <table class="table table-hover todo">
         <h2> To do </h2>
         <tr>
