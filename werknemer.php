@@ -4,10 +4,13 @@ include_once("classes/table.php");
 include_once("classes/database.php");
 include_once("classes/login.php");
 include_once("hulp/werknemerinfo.php");
+include_once("hulp/werknemertodo.php");
 $db = new db();
 $result = $db->conn->query($db->select("werkdagen", "WHERE werknemerId=" . $_SESSION["wid"]));
 $werkinfo = new werknemerinfo();
 $werkin = $werkinfo->werkinfo();
+$werktodo = new werknemertodo();
+$werkto = $werktodo->todo();
 ?>
 <!DOCTYPE html>
 <html>
@@ -65,26 +68,8 @@ $werkin = $werkinfo->werkinfo();
 <div class="content container">
 
     <?= $werkin; ?>
-    <table class="table table-hover todo">
-        <h2> To do </h2>
-        <tr>
-            <th>bedrijf naam</th>
-            <th>kamer naam</th>
-            <th>kamer nummer</th>
-            <th>kamer locatie</th>
-            <th>behaald punten</th>
-            <th>minimum punten</th>
-        </tr>
-        <tr>
-            <td>scania</td>
-            <td>kantine</td>
-            <td>1</td>
-            <td>bij binnenkomst</td>
-            <td>80</td>
-            <td></td>
-        </tr>
+    <?= $werkto; ?>
 
-    </table>
     <div id="calendar"></div>
 
 </body>

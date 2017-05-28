@@ -7,32 +7,26 @@ class werknemertodo
         $this->db = new db();
         $result = $this->db->conn->query($this->db->select("kamer", "WHERE werknemerId=" . $_SESSION["wid"]));
 
-        while($werknemer = $result->fetch_assoc())
+        while($kamer = $result->fetch_assoc())
         {
-            $this->table = '<table class="table table-condensed">';
-            $this->table .= '<h2> Werknemer info </h2>';
-            $this->table .= '<tr class="active">';
-            $this->table .= '<th>Naam:</th>';
-            $this->table .= '<td>'.$werknemer['werknemerNaam'].'</td>';
-            $this->table .= '</tr>';
-            $this->table .= '<tr class="active">';
-            $this->table .= '<th>Plaats:</th>';
-            $this->table .= '<td>'.$werknemer['werknemerPlaats'].'</td>';
-            $this->table .= '</tr>';
-            $this->table .= '<tr class="active">';
-            $this->table .= '<th>Telefoon nummer:</th>';
-            $this->table .= '<td>'.$werknemer['werknemerTelefoon'].'</td>';
-            $this->table .= '</tr>';
-            $this->table .= '<tr class="active">';
-            $this->table .= '<th>Email:</th>';
-            $this->table .= '<td>'.$werknemer['werknemerEmail'].'</td>';
-            $this->table .= '</tr>';
-            $this->table .= '<tr class="active">';
-            $this->table .= '<th>Geslacht:</th>';
-            $this->table .= '<td>'.$werknemer['werknemerGeslacht'].'</td>';
-            $this->table .= '</tr>';
-            $this->table .= "</table>";
-
+            $results = $this->db->conn->query($this->db->select("bedrijf", "WHERE bedrijfId=" . $kamer["bedrijfId"]));
+            while($bedrijf = $results->fetch_assoc()) {
+                $this->table = '<table class="table table-hover todo">';
+                $this->table .= '<h2> To do </h2>';
+                $this->table .= '<tr>';
+                $this->table .= '<th>bedrijf naam</th>';
+                $this->table .= ' <th>kamer naam</th>';
+                $this->table .= '<th>kamer nummer</th>';
+                $this->table .= ' <th>minimum punten</th>';
+                $this->table .= '</tr>';
+                $this->table .= '<tr>';
+                $this->table .= '<td>'.$bedrijf["bedrijfNaam"].'</td>';
+                $this->table .= '<td>'.$kamer["kamerNaam"].'</td>';
+                $this->table .= '<td>'.$kamer["kamerId"].'</td>';
+                $this->table .= '<td>'.$kamer["kamerminpunten"].'</td>';
+                $this->table .= '</tr>';
+                $this->table .= "</table>";
+            }
         }
         return $this->table;
     }
