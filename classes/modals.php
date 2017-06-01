@@ -56,20 +56,19 @@ if($_GET["table"] == "bedrijf"){
           <form method="get" action="hulp/Update.php">
           <div class="modal-body">
 
-            <table>
-                <tr>
-                    <td>Bedrijfs Naam:</td>
-                    <td><input type="text" name="bedrijfnaam"></td>
-                </tr>
-                <tr>
-                    <td>Bedrijfs Plaats:</td>
-                    <td><input type="text" name="bedrijfplaats"></td>
-                <tr>
-                <tr>
-                    <td>Bedrijfs Telefoon:</td>
-                    <td><input type="text" name="bedrijftelefoon"></td>
-                <tr>
-             </table>
+           <div class="form-group">
+                    <label>Bedrijfs Naam:</label>
+                    <input type="text" name="bedrijfnaam" class="form-control">
+           </div>
+           <div class="form-group">   
+                    <label>Bedrijfs Plaats:</label>
+                    <input type="text" name="bedrijfplaats" class="form-control">
+           </div>
+           <div class="form-group">  
+                    <label>Bedrijfs Telefoon:</label>
+                    <input type="text" name="bedrijftelefoon" class="form-control">
+           </div>
+           
             <input type="text" class="invisible" name="update" value="bedrijf">
             <input type="text" class="invisible" name="id" value="'.$row["bedrijfId"].'">
 
@@ -120,19 +119,19 @@ if($_GET["table"] == "kamer") {
 
             <div class="form-group">
                     <label>Kamer Naam:</label>
-                    <input type="text" name="kamernaam">
+                    <input type="text" name="kamernaam" class="form-control">
             </div> 
             <div class="form-group">
                     <label>Kamer minimum Punten:</label>
-                    <input type="text" name="kamerminpunten">
+                    <input type="text" name="kamerminpunten" class="form-control">
             </div>
             <div class="form-group">
                     <label>Kamer prioriteit:</label>
-                    <input type="text" name="kamerprioriteit">
+                    <input type="text" name="kamerprioriteit" class="form-control">
             </div>
             <div class="form-group">
                     <label>Werknemer id:</label>
-                    <input type="text" name="werknemerid">
+                    <input type="text" name="werknemerid" class="form-control">
             </div>
             <input type="text" class="invisible" name="create" value="kamer">
             <input type="text" class="invisible" name="bedrijfid" value="'.$_GET['bedrijfid'].'">
@@ -159,20 +158,18 @@ if($_GET["table"] == "kamer") {
            <form method="get" action="hulp/Update.php">
           <div class="modal-body">
 
-            <table>
-                <tr>
-                    <td>Kamer Naam:</td>
-                    <td><input type="text" name="kamernaam"></td>
-                </tr>
-                <tr>
-                    <td>Minimale punten:</td>
-                    <td><input type="text" name="kamerminpunten"></td>
-                <tr>
-                <tr>
-                    <td>Kamer prioriteit:</td>
-                    <td><input type="text" name="kamerprioriteit"></td>
-                <tr>
-             </table>
+           <div class="form-group">
+                    <label>Kamer Naam:</label>
+                    <input type="text" name="kamernaam" class="form-control">
+           </div>
+           <div class="form-group">  
+                    <label>Minimale punten:</label>
+                    <input type="text" name="kamerminpunten" class="form-control">
+            </div>
+            <div class="form-group">
+                    <label>Kamer prioriteit:</label>
+                    <input type="text" name="kamerprioriteit" class="form-control">
+            </div>
             <input type="text" class="invisible" name="update" value="kamer">
             <input type="text" class="invisible" name="id" value="'.$row["kamerId"].'">
 
@@ -222,15 +219,15 @@ if($_GET["table"] == "object") {
 
            <div class="form-group">
                     <label>Object Naam:</label>
-                    <input type="text" name="objectnaam">
+                    <input type="text" name="objectnaam" class="form-control">
            </div>
            <div class="form-group">   
                     <label>Object Punten:</label>
-                    <input type="text" name="objectpunten">
+                    <input type="text" name="objectpunten" class="form-control">
            </div>
            <div class="form-group">    
                     <label>Object aantal:</label>
-                    <input type="text" name="objectaantal">
+                    <input type="text" name="objectaantal" class="form-control">
            </div>
             <input type="text" class="invisible" name="create" value="object">
             <input type="text" class="invisible" name="kamerid" value="'.$_GET["kamerid"].'">
@@ -256,20 +253,18 @@ if($_GET["table"] == "object") {
            <form method="get" action="hulp/Update.php">
           <div class="modal-body">
 
-            <table>
-                <tr>
-                    <td>Object naam:</td>
-                    <td><input type="text" name="objectnaam"></td>
-                </tr>
-                <tr>
-                    <td>Object punten:</td>
-                    <td><input type="text" name="objectpunten"></td>
-                <tr>
-                <tr>
-                    <td>Object aantal:</td>
-                    <td><input type="text" name="objectaantal"></td>
-                <tr>
-             </table>
+            <div class="form-group">
+                    <label>Object naam:</label>
+                    <input type="text" name="objectnaam" class="form-control">
+            </div>
+             <div class="form-group">  
+                    <label>Object punten:</label>
+                    <input type="text" name="objectpunten" class="form-control">
+              </div>
+              <div class="form-group">
+                    <label>Object aantal:</label>
+                    <input type="text" name="objectaantal" class="form-control">
+               </div>
             <input type="text" class="invisible" name="update" value="object">
             <input type="text" class="invisible" name="id" value="'.$row["objectId"].'">
 
