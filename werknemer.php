@@ -69,8 +69,13 @@ $werkto = $werktodo->todo();
 
     <?= $werkin; ?>
     <?= $werkto; ?>
+    <?php
+    if($_SESSION["wid"] != 0){
+        echo '<div id="calendar"></div>';
+    }
 
-    <div id="calendar"></div>
+    ?>
+
 
 </body>
 </html>

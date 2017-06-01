@@ -7,6 +7,13 @@ class werknemertodo
         $this->db = new db();
         $result = $this->db->conn->query($this->db->select("kamer", "WHERE werknemerId=" . $_SESSION["wid"]));
 
+            $this->table = '<table class="table table-hover todo">';
+            $this->table .= '<h2> To do </h2>';
+            $this->table .= '<tr>';
+            $this->table .= '<th>er is niet te doen</th>';
+            $this->table .= '</tr>';
+            $this->table .= "</table>";
+        
         while($kamer = $result->fetch_assoc())
         {
             $results = $this->db->conn->query($this->db->select("bedrijf", "WHERE bedrijfId=" . $kamer["bedrijfId"]));

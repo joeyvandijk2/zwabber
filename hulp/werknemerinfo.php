@@ -5,7 +5,7 @@ class werknemerinfo{
     public function werkinfo(){
         $this->db = new db();
         $result = $this->db->conn->query($this->db->select("werknemer", "WHERE werknemerId=" . $_SESSION["wid"]));
-
+        $this->table = '<h2>U bent niet ingelogt</h2>';
         while($werknemer = $result->fetch_assoc())
         {
             $this->table = '<table class="table table-condensed">';
