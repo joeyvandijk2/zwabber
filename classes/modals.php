@@ -15,21 +15,20 @@ if($_GET["table"] == "bedrijf"){
           </div>
           <form method="get" action="hulp/Create.php">
           <div class="modal-body">
-
-            <table>
-                <tr>
-                    <td>Bedrijfs Naam:</td>
-                    <td><input type="text" name="bedrijfnaam"></td>
-                </tr>
-                <tr>
-                    <td>Bedrijfs Plaats:</td>
-                    <td><input type="text" name="bedrijfplaats"></td>
-                <tr>
-                <tr>
-                    <td>Bedrijfs Telefoon:</td>
-                    <td><input type="text" name="bedrijftelefoon"></td>
-                <tr>
-             </table>
+            
+                <div class="form-group">
+                    <label for="myModalLabel">Bedrijfs Naam:</label>
+                    <input type="text" name="bedrijfnaam" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Bedrijfs Plaats:</label>
+                    <input type="text" name="bedrijfplaats" class="form-control">
+                </div>
+ 
+                <div class="form-group">
+                    <label>Bedrijfs Telefoon:</label>
+                    <input type="text" name="bedrijftelefoon" class="form-control">
+                </div>
             <input type="text" class="invisible" name="create" value="bedrijf">
 
           </div>
@@ -119,24 +118,22 @@ if($_GET["table"] == "kamer") {
           <form method="get" action="hulp/Create.php">
           <div class="modal-body">
 
-            <table>
-                <tr>
-                    <td>Kamer Naam:</td>
-                    <td><input type="text" name="kamernaam"></td>
-                </tr>
-                <tr>
-                    <td>Kamer minimum Punten:</td>
-                    <td><input type="text" name="kamerminpunten"></td>
-                <tr>
-                <tr>
-                    <td>Kamer prioriteit:</td>
-                    <td><input type="text" name="kamerprioriteit"></td>
-                <tr>
-                <tr>
-                    <td>Werknemer id:</td>
-                    <td><input type="text" name="werknemerid"></td>
-                <tr>
-             </table>
+            <div class="form-group">
+                    <label>Kamer Naam:</label>
+                    <input type="text" name="kamernaam">
+            </div> 
+            <div class="form-group">
+                    <label>Kamer minimum Punten:</label>
+                    <input type="text" name="kamerminpunten">
+            </div>
+            <div class="form-group">
+                    <label>Kamer prioriteit:</label>
+                    <input type="text" name="kamerprioriteit">
+            </div>
+            <div class="form-group">
+                    <label>Werknemer id:</label>
+                    <input type="text" name="werknemerid">
+            </div>
             <input type="text" class="invisible" name="create" value="kamer">
             <input type="text" class="invisible" name="bedrijfid" value="'.$_GET['bedrijfid'].'">
 
@@ -223,20 +220,18 @@ if($_GET["table"] == "object") {
           <form method="get" action="hulp/Create.php">
           <div class="modal-body">
 
-            <table>
-                <tr>
-                    <td>Object Naam:</td>
-                    <td><input type="text" name="objectnaam"></td>
-                </tr>
-                <tr>
-                    <td>Object Punten:</td>
-                    <td><input type="text" name="objectpunten"></td>
-                <tr>
-                <tr>
-                    <td>Object aantal:</td>
-                    <td><input type="text" name="objectaantal"></td>
-                <tr>
-             </table>
+           <div class="form-group">
+                    <label>Object Naam:</label>
+                    <input type="text" name="objectnaam">
+           </div>
+           <div class="form-group">   
+                    <label>Object Punten:</label>
+                    <input type="text" name="objectpunten">
+           </div>
+           <div class="form-group">    
+                    <label>Object aantal:</label>
+                    <input type="text" name="objectaantal">
+           </div>
             <input type="text" class="invisible" name="create" value="object">
             <input type="text" class="invisible" name="kamerid" value="'.$_GET["kamerid"].'">
 
