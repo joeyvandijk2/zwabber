@@ -4,7 +4,7 @@ class db{
     public function __construct(){
         $servername = "localhost";
         $username = "root";
-        $password = "usbw";
+        $password = "";
         $dbname = "zwabber";
 
         $this->conn = new mysqli($servername, $username, $password, $dbname);

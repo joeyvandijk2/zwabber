@@ -5,10 +5,12 @@ body
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
+
 }
 
 .topbalk
 {
+	border-bottom: 1px solid black;
 	background-color: white;
 	height: 110px;
 	text-align: center;
@@ -19,6 +21,9 @@ body
 {
 	vertical-align: middle;
 	background-color: white;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-bottom: 1.5px solid black;
 }
 .glyphicon-plus{
 	margin-bottom: 15px;
@@ -27,12 +32,15 @@ body
 {
 	height: 110px;
 	background-color: white;
+	border-bottom: 1px solid black;
 }
 
 .menu
 {
 	background-color: white;
 	height: 110px;
+	border-bottom: 1px solid black;
+	font-family: Chalkduster, fantasy;
 }
 
 .inlog

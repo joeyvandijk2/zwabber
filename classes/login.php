@@ -31,12 +31,12 @@ if($_SESSION["log"] == 0){
     $login = ' <form method="post">
                     <input type="text" class="form-control inloginput" name="username" placeholder="Username">
                     <input type="password" class="form-control inloginput" name="password" placeholder="Password">
-                    <input type="submit" class="btn btn-default logbtn" name="login" value="log in">
+                    <input type="submit" class="btn btn-primary logbtn" name="login" value="log in">
                 </form>';
 }
 else{
     $login = ' <form method="post">
-                    <input type="submit" class="btn btn-default logbtn" name="logout" value="log out">
+                    <input type="submit" class="btn btn-primary logbtn" name="logout" value="log out">
                 </form>';
 }
 
