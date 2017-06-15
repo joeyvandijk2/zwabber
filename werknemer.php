@@ -119,21 +119,20 @@ $werkto = $werktodo->todo();
                 center: 'title',
                 right: 'month,basicWeek,basicDay'
             },
-            defaultDate: '2017-04-12',
             navLinks: true, // can click day/week names to navigate views
             editable: true,
             eventLimit: true, // allow "more" link when too many events
             events:
                 [
-                <?php
-                while($wd = $result->fetch_assoc())
-                {
-                    echo "{";
-                    echo " title: '".$wd["werkTitle"]." ' ,";
-                    echo " start: '".$wd["werkdag"]." '";
-                    echo "},";
-                }
-                ?>
+                    <?php
+                    while($wd = $result->fetch_assoc())
+                    {
+                        echo "{";
+                        echo " title: '".$wd["werkTitle"]."' ,";
+                        echo " start: '".$wd["werkdag"]."'";
+                        echo "},";
+                    }
+                    ?>
             ]
         });
 
