@@ -23,7 +23,7 @@ body
 	background-color: white;
 	border-bottom-left-radius: 8px;
 	border-bottom-right-radius: 8px;
-	border-bottom: 1.5px solid black;
+	border-bottom: 1.8px solid black;
 }
 .glyphicon-plus{
 	margin-bottom: 15px;
@@ -40,7 +40,7 @@ body
 	background-color: white;
 	height: 110px;
 	border-bottom: 1px solid black;
-	font-family: Chalkduster, fantasy;
+	font-family: Impact, Charcoal, sans-serif;
 }
 
 .inlog

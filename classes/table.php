@@ -47,6 +47,7 @@ class table
         $this->table .= "<tr>";
         $this->table .= "<td> Kamer ID</td>";
         $this->table .= "<td> Kamer Naam</td>";
+        $this->table .= "<td> Schoonmaak tijd</td>";
         $this->table .= "<td> Min aantal punten</td>";
         $this->table .= "<td> Prioriteit</td>";
         $this->table .= "<td> Opties</td>";
@@ -56,6 +57,7 @@ class table
             $this->table .= "<tr>";
             $this->table .= "<td>" . $bedrijf["kamerId"] . "</td>";
             $this->table .= "<td>" . $bedrijf["kamerNaam"] . "</td>";
+            $this->table .= "<td>" . $bedrijf["Schoonmaaktijd"] . "</td>";
             $this->table .= "<td>" . $bedrijf["kamerminpunten"] . "</td>";
             $this->table .= "<td>" . $bedrijf["kamerPrioriteit"] . "</td>";
             $this->table .= "<td><a href='?table=bedrijf'><span class='glyphicon glyphicon-arrow-left'></span> </a><a href='?table=object&bedrijfid=" . $bedrijf["bedrijfId"] . "&kamerid=" . $bedrijf["kamerId"] . "'><span class='glyphicon glyphicon-arrow-right'></span> </a>";

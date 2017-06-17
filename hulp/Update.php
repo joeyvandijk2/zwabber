@@ -8,7 +8,7 @@ if($_GET["update"] == "bedrijf"){
     $db->update("bedrijf","bedrijfNaam='".$_GET['bedrijfnaam']."', bedrijfPlaats='".$_GET['bedrijfplaats']."', bedrijfTelefoon='". $_GET["bedrijftelefoon"]."'","bedrijfId = ".$_GET["id"]);
 }
 if($_GET["update"] == "kamer"){
-    $db->update("kamer","kamerNaam='".$_GET['kamernaam']."', kamerminpunten='".$_GET['kamerminpunten']."', 	kamerPrioriteit='". $_GET["kamerprioriteit"]."'","kamerId = ".$_GET["id"]);
+    $db->update("kamer","kamerNaam='".$_GET['kamernaam']."', Schoonmaaktijd='".$_GET['schoonmaaktijd']."'', kamerminpunten='".$_GET['kamerminpunten']."', 	kamerPrioriteit='". $_GET["kamerprioriteit"]."'","kamerId = ".$_GET["id"]);
 
 }
 if($_GET["update"] == "object"){

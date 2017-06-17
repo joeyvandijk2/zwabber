@@ -122,6 +122,10 @@ if($_GET["table"] == "kamer") {
                     <input type="text" name="kamernaam" class="form-control">
             </div> 
             <div class="form-group">
+                    <label>Schoonmaak tijd:</label>
+                    <input type="text" name="schoonmaaktijd" class="form-control">
+            </div> 
+            <div class="form-group">
                     <label>Kamer minimum Punten:</label>
                     <input type="text" name="kamerminpunten" class="form-control">
             </div>

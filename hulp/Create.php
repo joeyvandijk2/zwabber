@@ -9,8 +9,8 @@ if($_GET["create"] == "bedrijf"){
     header("Location: ../ ");
 }
 if($_GET["create"] == "kamer"){
-    $db->create("kamer","bedrijfId, kamerNaam, kamerminpunten, kamerPrioriteit, werknemerId","'".$_GET['bedrijfid']."','".$_GET['kamernaam']."','". $_GET["kamerminpunten"]."','". $_GET["kamerprioriteit"]."','". $_GET["werknemerid"]."'");
-    header("Location: ../index.php?table=object&bedrijfid=".$_GET['bedrijfid']);
+    $db->create("kamer","bedrijfId, kamerNaam, Schoonmaaktijd, kamerminpunten, kamerPrioriteit, werknemerId","'".$_GET['bedrijfid']."','".$_GET['kamernaam']."','".$_GET['schoonmaaktijd']."','". $_GET["kamerminpunten"]."','". $_GET["kamerprioriteit"]."','". $_GET["werknemerid"]."'");
+    header("Location: ../index.php?table=kamer&bedrijfid=".$_GET['bedrijfid']);
 }
 if($_GET["create"] == "object"){
     $db->create("object","kamerId, objectNaam, objectPunten, objectAantal","'".$_GET['kamerid']."','".$_GET['objectnaam']."','". $_GET["objectpunten"]."','". $_GET["objectaantal"]."'");
