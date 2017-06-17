@@ -17,6 +17,17 @@ if($_GET["create"] == "object"){
     header("Location: ../index.php?table=object&kamerid=".$_GET['kamerid']);
 
 }
+if($_GET["create"] == "werkdag"){
+    $db->create("werkdagen","werknemerId, werkTitle, werkdag","'".$_GET['werknemerid']."','".$_GET['tijd']."','". $_GET["dag"]."'");
+    header("Location: ../werknemer.php");
+
+}
+if($_GET["create"] == "account"){
+    $db->create("werknemer","werknemerGebruikersnaam, werknemerWachtwoord, werknemerNaam, werknemerPlaats, werknemerEmail, werknemerTelefoon, werknemerGeslacht, Rechten"
+        ,"'".$_GET['genaam']."','".$_GET['geww']."','". $_GET["naam"]."','".$_GET['plaats']."','".$_GET['email']."','".$_GET['tele']."','".$_GET['slacht']."','".$_GET['recht']."'");
+    header("Location: ../");
+
+}
 
 
 ?>

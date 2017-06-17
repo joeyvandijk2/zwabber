@@ -27,7 +27,7 @@ class werknemertodo
                 $this->table .= ' <th>minimum punten</th>';
                 $this->table .= '</tr>';
                 $this->table .= '<tr>';
-                $this->table .= '<td>'.$bedrijf["bedrijfNaam"].'</td>';
+                $this->table .= '<td><a href="index.php?table=kamer&bedrijfid='.$bedrijf["bedrijfId"].'"> '.$bedrijf["bedrijfNaam"].'</a></td>';
                 $this->table .= '<td>'.$kamer["kamerNaam"].'</td>';
                 $this->table .= '<td>'.$kamer["kamerId"].'</td>';
                 $this->table .= '<td>'.$kamer["kamerminpunten"].'</td>';
