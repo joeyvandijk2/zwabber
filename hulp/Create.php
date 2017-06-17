@@ -22,6 +22,12 @@ if($_GET["create"] == "werkdag"){
     header("Location: ../werknemer.php");
 
 }
+if($_GET["create"] == "account"){
+    $db->create("werknemer","werknemerGebruikersnaam, werknemerWachtwoord, werknemerNaam, werknemerPlaats, werknemerEmail, werknemerTelefoon, werknemerGeslacht, Rechten"
+        ,"'".$_GET['genaam']."','".$_GET['geww']."','". $_GET["naam"]."','".$_GET['plaats']."','".$_GET['email']."','".$_GET['tele']."','".$_GET['slacht']."','".$_GET['recht']."'");
+    header("Location: ../");
+
+}
 
 
 ?>
