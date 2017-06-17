@@ -16,6 +16,10 @@ if($_GET["delete"] == "kamer"){
 if($_GET["delete"] == "object"){
     $db->delete("object","objectId = ".$_GET["id"]);
 }
+if($_GET["delete"] == "werkdag"){
+    $db->delete("werkdagen","werkdagId = ".$_GET["id"]);
+    header("Location: ../werknemer.php ");
+}
 else{
     header("Location: ../ ");
 }

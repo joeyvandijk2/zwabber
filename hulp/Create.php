@@ -17,6 +17,11 @@ if($_GET["create"] == "object"){
     header("Location: ../index.php?table=object&kamerid=".$_GET['kamerid']);
 
 }
+if($_GET["create"] == "werkdag"){
+    $db->create("werkdagen","werknemerId, werkTitle, werkdag","'".$_GET['werknemerid']."','".$_GET['tijd']."','". $_GET["dag"]."'");
+    header("Location: ../werknemer.php");
+
+}
 
 
 ?>
